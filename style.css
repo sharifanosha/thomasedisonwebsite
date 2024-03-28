@@ -10,10 +10,10 @@
 }
 
 :root {
-  --bg-color: #111111;
-  --second-bg-color: #151515;
+  --bg-color: #A9B3CA;
+  --second-bg-color: #4682B4;
   --text-color: #ededed;
-  --main-color: #00abf0;
+  --main-color: #002e7a;
 }
 
 html{
@@ -32,8 +32,8 @@ body{
   left: 0;
   width: 100%;
   padding: 3rem 9%;
-  background-color: black;
-  background-filter: blur(10px);
+  background: #5B6879;
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,8 +63,13 @@ body{
 
 .navbar a:hover, .navbar a.active {
   color: var(--main-color);
-  border-bottom: 3px solid var(--main-color);
+  border-bottom: 3px solid #D1B520;
 }
+
+
+
+
+
 
 
 
@@ -170,41 +175,210 @@ span{
   position: relative;
 }
 
-.text-animation span::before{
-  content: 'Web Developer';
+
+
+
+
+
+
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background: var(--second-bg-color);
+  color: #ffffff;
+}
+
+.about h2 span {
   color: var(---main-color);
-  animation: words 20s infinte;
+  text-shadow: 0 0 50px var(---main-color);
 }
 
-.text-animation span::after{
-  content: "";
+.about-img {
+  border-radius: 50%;
+}
+
+.about-img img {
+  position: relative;
+  width: 32vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(---main-color);
+  top: 1rem;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.about-img img: hover {
+  box-shadow: 0 0 50px var(---main-color), 0 0 100px var(---main-color);
+}
+
+.heading {
+  text-align: center;
+  font-size: 8rem;
+}
+
+.about-content h2{
+  text-align: left;
+  line-height: 1.5;
+}
+
+.about-content h3 {
+  font-size: 2.6rem;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+
+.about-content .text-animation span::before{
+  color: var(---main-color);
+}
+
+
+
+
+
+
+
+
+::-webkit-scrollbar{
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track{
   background-color: var(--bg-color);
-  position: absolute;
-  width: calc(100% +8px);
-  height: 100%;
-  border-left: 3px solid var(--bg-color);
-  right: -8px;
-  animation: cursor 0.6s infinite, typing 20s steps(14) infinite; 
+  width: 50px;
 }
 
-@keyframes cursor {
-  to {
-    border-left: 2px solid var(--main-color);
-  }
+
+
+
+
+
+
+
+.course {
+  background: var(--bg-color);
+  color: white;
 }
 
-@keyframes words {
-  0%,
-  20%{
-    content: "Web Developer";
-  }
-  21%,
-  40%{
-    content: "Web Designer";
-  }
-  41%,
-  60%{
-    content: "Web Developer";
-  }
-  
+.course h2{
+  margin-bottom: 5rem;
+  color: white;
+}
+
+.course-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.course-box {
+  background-color: #4682B4;
+  color: #001e57;
+  height: 250px;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.course-box:hover{
+  background: #c4bc00;
+  color: var(---main-color);
+  transform: scale(1.03);
+}
+
+.course-box .course-info{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-height: 200px;
+  justify-content: center;
+  align-items: baseline;
+  padding: 5em;
+}
+
+.course-info h4{
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.course-info p{
+  font-size: 1.6rem;
+  font-weight: 400;
+  max-height: 100px;
+  margin: auto;
+}
+
+
+
+
+
+img.saftey {
+  height: 80%;
+  width: 80%;
+}
+
+img.guidance {
+  height: 35%;
+  width: 35%;
+}
+
+img.english {
+  height: 50%;
+  width: 50%;
+}
+
+img.math {
+  height: 50%;
+  width: 50%;
+}
+
+img.science {
+  height: 50%;
+  width: 50%;
+}
+
+img.ss {
+  height: 50%;
+  width: 50%;
+}
+
+img.cte {
+  height: 50%;
+  width: 50%;
+}
+
+img.art {
+  height: 50%;
+  width: 50%;
+}
+
+img.fl {
+  height: 50%;
+  width: 50%;
+}
+
+img.gym {
+  height: 50%;
+  width: 50%;
+}
+
+img.book {
+  height: 50%;
+  width: 50%;
+}
+
+img.iss {
+  height: 50%;
+  width: 50%;
 }
